@@ -7,7 +7,7 @@ def generate_products_data() -> None:
     from pathlib import Path
 
     from app.entities import Product
-    products = []
+
     products = [
         Product(id=1, name="Бетон М100", price=5000, region="Москва", category="Бетон"),
         Product(id=2, name="Бетон М300", price=9000, region="Москва", category="Бетон"),
@@ -19,7 +19,6 @@ def generate_products_data() -> None:
         Product(id=8, name="Бетон М300", price=6000, region="Новосибирск", category="Бетон"),
         Product(id=9, name="Песок речной", price=1200, region="Новосибирск", category="Песок"),
         Product(id=10, name="Песок карьерный", price=800, region="Новосибирск", category="Песок"),
-        
     ]
 
     output_path = Path("products.json")
