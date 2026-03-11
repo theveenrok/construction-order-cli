@@ -24,8 +24,8 @@ class InMemoryProductRepository(BaseProductRepository):
         return [p for p in self._products if p.region == region]
 
     def get_cheaper_alternative(self, product: Product) -> Product | None:
-        filtered = filter(lambda p: p.region == product.region and p.category == product.category and p.price < product.price, self._products)
-        return next(filtered, None,)
+        similar_products = filter(lambda p: p.region == product.region and p.category == product.category and p.id != product.id and p.price < product.price, self._products)
+        return min(similar_products, key=lambda p: p.price, default=None)
 
     def get_available_region_names(self) -> Sequence[str]:
         return sorted(set(p.region for p in self._products))
