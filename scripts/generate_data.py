@@ -1,3 +1,4 @@
+import dataclasses
 
 
 def generate_products_data() -> None:
@@ -23,6 +24,6 @@ def generate_products_data() -> None:
 
     output_path = Path("products.json")
     with output_path.open("w") as f:
-        json.dump([p.__dict__ for p in products], f, ensure_ascii=False, indent=4)
+        json.dump([dataclasses.asdict(p) for p in products], f, ensure_ascii=False, indent=4)
 
     print(f"Sample products data has been generated and saved to {output_path.absolute()}")
