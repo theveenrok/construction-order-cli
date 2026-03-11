@@ -13,3 +13,5 @@ dependencies = [
     "typer>=0.24.1",
 ]
 
+[project.scripts]
+cli = "app.cli:main"
