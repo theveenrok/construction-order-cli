@@ -32,3 +32,11 @@ fmt:
     @uv run --group=lint ruff format --preview
 
 check: fmt lint test
+
+generate-data:
+    @uv run generate-data
+
+[arg("PRODUCTS_PATH", long="products-path")]
+[arg("ORDER_PATH", long="order-path")]
+run PRODUCTS_PATH ORDER_PATH:
+    @uv run cli --products-path="{{ PRODUCTS_PATH }}" --order-path="{{ ORDER_PATH }}"
