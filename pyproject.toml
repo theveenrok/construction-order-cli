@@ -18,3 +18,4 @@ dependencies = [
 
 [project.scripts]
 cli = "app.cli:main"
+generate-data = "scripts.generate_data:generate_products_data"
