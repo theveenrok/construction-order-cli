@@ -6,6 +6,9 @@ requires = [ "hatchling" ]
 name = "construction-order-cli"
 version = "0.1.0"
 description = "CLI application to create construction orders."
+authors = [
+    { name = "Vlad Korneev", email = "veenrok@veenrok.com" }
+]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
