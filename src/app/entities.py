@@ -1,4 +1,5 @@
 from __future__ import annotations
+import uuid
 
 import dataclasses
 
@@ -15,6 +16,7 @@ class Product:
         region: Region of sale.
     """
 
+    id: int
     name: str
     price: float
     category: str
@@ -47,6 +49,7 @@ class Order:
         total_price: Total price of the order in rubles.
     """
 
+    id: int
     region: str
     product_name: str
     product_category: str
