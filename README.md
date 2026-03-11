@@ -22,10 +22,12 @@
   ```bash
     git clone https://github.com/theveenrok/construction-order-cli.git
   ```
+
 2. Перейдите в директорию проекта:
   ```bash
     cd construction-order-cli
   ```
+
 3. Установите зависимости:
   ```bash
     just setup
@@ -48,6 +50,7 @@
   Это создаст файл `products.json`
   или
   Создайте файл в ручную, который должен содержать массив объектов с полями: `id (int)`, `name (str)`, `category (str)`, `price (float)`, `region (str)`.
+  
 2. Запустите приложение:
   ```bash
     just run --products-path="path/to/products.json" --order-path="path/to/order.json"
@@ -57,4 +60,3 @@
     uv run cli --products-path="path/to/products.json" --order-path="path/to/order
   ```
   Это запустит cli интерфейс, который предложит вам выбрать регион и товар, а затем подтвердить заказ или отказаться от него. Если вы откажетесь, приложение предложит более дешевый аналог или скидку на выбранный товар. После подтверждения заказа будет создан файл  с деталями заказа по пути, котрый вы передали в `--order-path`. Он содержит поля `id (int)`, `region (str)`, `product_name (str)`, `product_category (str)`, `total_price (float)`.
-  
