@@ -57,6 +57,6 @@
   ```
   или
   ```bash
-    uv run cli --products-path="path/to/products.json" --order-path="path/to/order
+    uv run cli --products-path="path/to/products.json" --order-path="path/to/order"
   ```
   Это запустит cli интерфейс, который предложит вам выбрать регион и товар, а затем подтвердить заказ или отказаться от него. Если вы откажетесь, приложение предложит более дешевый аналог или скидку на выбранный товар. После подтверждения заказа будет создан файл  с деталями заказа по пути, котрый вы передали в `--order-path`. Он содержит поля `id (int)`, `region (str)`, `product_name (str)`, `product_category (str)`, `total_price (float)`.
