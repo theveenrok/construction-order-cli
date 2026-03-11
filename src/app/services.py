@@ -15,7 +15,7 @@ def create_alternative_offer_or_sale(product: Product, repository: BaseProductRe
     if alternative_product:
         return create_offer(alternative_product)
     else:
-        return create_offer(product, discount=0.05)  # Offer a 10% discount if no alternatives are available
+        return create_offer(product, discount=0.05)  # Offer a 5% discount if no alternatives are available
 
 
 def place_order(offer: CommercialOffer, exporter: BaseOrderExporter) -> Order:
